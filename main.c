@@ -6,8 +6,8 @@
 int main(void) {
   // Window Initialization
 
-  const int screenW = 320;
-  const int screenH = 180;
+  const int screenW = 1280;
+  const int screenH = 720;
   InitWindow(screenW, screenH, "My First real Raylib Window!");
   SetTargetFPS(60);
 
