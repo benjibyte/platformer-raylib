@@ -9,10 +9,11 @@ int main(void) {
   const int screenW = 1280;
   const int screenH = 720;
   InitWindow(screenW, screenH, "My First real Raylib Window!");
+  SetExitKey(KEY_NULL);
   SetTargetFPS(60);
 
   // Game Loop
-  while (!WindowShouldClose) {
+  while (!WindowShouldClose()) {
     // Logic Updates go here ...
 
     // Drawing the Window and Graphics
@@ -21,7 +22,7 @@ int main(void) {
       DrawText("Congrats! I created my first window!", 190, 200, 20, LIGHTGRAY);
     EndDrawing();
   } // End of Game loop
-
+  CloseWindow();
 
   return 0; // Close program
 }
