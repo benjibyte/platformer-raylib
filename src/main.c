@@ -17,6 +17,8 @@ int main(void) {
   Texture2D player = LoadTextureFromImage(PlayerBox);
   UnloadImage(PlayerBox);
 
+  Vector2 playerPosition = { (float)screenW/2, (float)screenH/2 };
+
   SetTargetFPS(60);
 
   // Game Loop
