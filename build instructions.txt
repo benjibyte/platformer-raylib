@@ -1,2 +1,0 @@
-Remember to build with the following command on Linux Distributions using Wayland:
-gcc main.c -o game -lraylib -lGL -lm -lpthread -ldl -lrt
