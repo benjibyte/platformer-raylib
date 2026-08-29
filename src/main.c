@@ -58,8 +58,20 @@ int main(void) {
     BeginDrawing();
       ClearBackground(DARKGRAY);
 
+      Rectangle sourceRect = { 0.0f, 0.0f, (float)canvas.texture.width, -(float)canvas.texture.height };
+      Rectangle destinationRect = { 0.0f,  0.0f, (float)GetScreenWidth(), (float)GetScreenHeight() };
+
+      // Origin point for rotation (top-left)
+      Vector2 origin = { 0.0f, 0.0f };
+
+      DrawTexturePro(canvas.texture, sourceRect, destinationRect, origin, 0.0f, WHITE);
+      DrawFPS(10,10);
+
     EndDrawing();
   } // End of Game loop
+  
+  UnloadTexture(player);
+  UnloadRenderTexture(canvas);
   CloseWindow();
 
   return 0; // Close program
